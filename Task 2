@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Landing Page</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+header{
+    background:#007BFF;
+    color:white;
+    padding:15px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header ul{
+    list-style:none;
+    display:flex;
+}
+
+header ul li{
+    margin-left:20px;
+}
+
+header ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.hero{
+    height:90vh;
+    background:linear-gradient(to right,#4facfe,#00f2fe);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:50px;
+}
+
+.hero p{
+    margin:20px 0;
+    font-size:20px;
+}
+
+.btn{
+    padding:12px 25px;
+    background:white;
+    color:#007BFF;
+    text-decoration:none;
+    border-radius:5px;
+    font-weight:bold;
+}
+
+.features{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+    padding:50px;
+}
+
+.card{
+    background:white;
+    width:280px;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.about{
+    padding:50px;
+    text-align:center;
+}
+
+.contact{
+    background:white;
+    padding:50px;
+}
+
+form{
+    max-width:500px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+}
+
+input,textarea{
+    margin:10px 0;
+    padding:12px;
+    font-size:16px;
+}
+
+button{
+    padding:12px;
+    background:#007BFF;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+}
+
+header ul{
+    margin-top:10px;
+    flex-direction:column;
+    text-align:center;
+}
+
+header ul li{
+    margin:10px 0;
+}
+
+.hero h1{
+    font-size:35px;
+}
+
+.features{
+    flex-direction:column;
+    align-items:center;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h2>Landing Page</h2>
+
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+
+</header>
+
+<section class="hero">
+
+<h1>Welcome to Our Website</h1>
+
+<p>Create Beautiful Responsive Websites with HTML, CSS and JavaScript.</p>
+
+<a href="#" class="btn">Get Started</a>
+
+</section>
+
+<section class="features">
+
+<div class="card">
+<h3>Responsive Design</h3>
+<p>Works perfectly on desktop, tablet and mobile devices.</p>
+</div>
+
+<div class="card">
+<h3>Fast Performance</h3>
+<p>Lightweight design for better speed and user experience.</p>
+</div>
+
+<div class="card">
+<h3>Easy Customization</h3>
+<p>Modify colors, text and layout easily.</p>
+</div>
+
+</section>
+
+<section class="about">
+
+<h2>About Us</h2>
+
+<p>
+We build modern and responsive websites using HTML, CSS and JavaScript.
+Our goal is to create attractive and user-friendly web applications.
+</p>
+
+</section>
+
+<section class="contact">
+
+<h2 align="center">Contact Us</h2>
+
+<form id="contactForm">
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="email" placeholder="Your Email" required>
+
+<textarea rows="5" placeholder="Your Message"></textarea>
+
+<button type="submit">Submit</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<p>© 2026 Responsive Landing Page | All Rights Reserved</p>
+
+</footer>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit",function(e){
+    e.preventDefault();
+    alert("Thank you! Your message has been submitted.");
+    this.reset();
+});
+</script>
+
+</body>
+</html>
